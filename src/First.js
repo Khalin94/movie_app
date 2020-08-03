@@ -11,7 +11,8 @@ function First(props) {
   */
   return (
     <h3>
-      {props.name} Component! {props.image}
+      {props.name} Component!
+      <img src={props.picture} width="100" height="100" alt={props.name}></img>
     </h3>
   );
 }
