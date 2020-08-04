@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function First(props) {
   //function First({order}){  props 내부에서 값을 읽어오는 방법 {order}로 바로 읽어올수 있다.
@@ -16,5 +17,11 @@ function First(props) {
     </h3>
   );
 }
+
+First.propTypes = {
+  name: PropTypes.string.isRequired,
+  picture: PropTypes.string.isRequired,
+  pictureRating: PropTypes.number.isRequired,
+};
 
 export default First;
