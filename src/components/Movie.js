@@ -6,19 +6,19 @@ import "./Movie.css";
 //Movies Component는 state를 필요로 하지 않으므로 function Component로 만들어줌
 function Movie({ id, title, year, summary, poster, genres }) {
   return (
-    <Link
-      to={{
-        pathname: `/movie/${id}`,
-        state: {
-          title,
-          year,
-          summary,
-          poster,
-          genres,
-        },
-      }}
-    >
-      <div className="movie">
+    <div className="movie">
+      <Link
+        to={{
+          pathname: `/movie/${id}`,
+          state: {
+            title,
+            year,
+            summary,
+            poster,
+            genres,
+          },
+        }}
+      >
         <img src={poster} alt={title} title={title}></img>
         <div className="movie_data">
           <h3 className="movie_title">
@@ -35,8 +35,8 @@ function Movie({ id, title, year, summary, poster, genres }) {
           </ul>
           <p className="movie_summary">{summary.slice(0, 140)} ...</p>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }
 
